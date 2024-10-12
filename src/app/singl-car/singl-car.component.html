@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+<div *ngIf="car" class="col-md-6">
+  <img class="w-100" [src]="car.image.url" alt="">
+</div>
+<div *ngIf="car" class="col-md-6">
+  <div>
+    <span class=" text-primary border rounded-3 p-1 ">why choose us</span>
+    <h3>we offer the best experiance</h3>
+    <h3>with our rental deals</h3>
+  </div>
+
+  <div class="d-flex flex-column text-dark opacity-50 mt-4">
+    <span *ngIf="car.airConditioning"><i class="fa-solid fa-wind"></i> Air Conditioning</span>
+  <span *ngIf="!car.airConditioning"><i class="fa-solid fa-wind"></i> no Air Conditioning</span>
+  <span><i class="fa-solid fa-door-closed"></i> {{car.doors}} doors</span>
+  <span><i class="fa-solid fa-user"></i> {{car.passengers}} passeagers</span>
+  <span><i class="fa-solid fa-car-alt"></i> {{car.transmissions}}</span>
+  </div>
+</div>
+  </div>
+</div>
+
+
